@@ -1,0 +1,50 @@
+glucose-response-analysis/
+├── README.md
+├── requirements.txt
+├── setup.py
+├── .env.example
+├── .gitignore
+├── config/
+│   ├── __init__.py
+│   ├── config.yaml
+│   └── logging.yaml
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── external/
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── data_loader.py
+│   │   └── data_preprocessor.py
+│   ├── features/
+│   │   ├── __init__.py
+│   │   └── feature_engineering.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── gaussian_fitting.py
+│   │   └── xgboost_regressor.py
+│   ├── visualization/
+│   │   ├── __init__.py
+│   │   └── plotting.py
+│   └── utils/
+│       ├── __init__.py
+│       └── helpers.py
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_gaussian_fitting.ipynb
+│   └── 03_ml_modeling.ipynb
+├── tests/
+│   ├── __init__.py
+│   ├── test_data_loader.py
+│   ├── test_gaussian_fitting.py
+│   └── test_feature_engineering.py
+├── scripts/
+│   ├── train_model.py
+│   ├── evaluate_model.py
+│   └── run_pipeline.py
+└── outputs/
+    ├── models/
+    ├── figures/
+    └── reports/
