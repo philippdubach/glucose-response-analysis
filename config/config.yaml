@@ -1,0 +1,53 @@
+# Configuration for Glucose Response Analysis Project
+
+project:
+  name: "glucose-response-analysis"
+  version: "1.0.0"
+  description: "Analysis of glucose response patterns using Hall 2018 dataset"
+
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  hall_data_file: "hall2018.csv"
+  meals_data_file: "hall_meals.csv"
+  
+  # Data filtering parameters
+  exclude_diabetic: true
+  incomplete_datasets: ["2133-002", "2133-08", "2133-09"]
+  columns_to_drop: ["pseudoID", "BMI", "insulinModality", "sex", "device", "dataset"]
+
+analysis:
+  # Glucose curve fitting parameters
+  observation_window_minutes: 150  # 2.5 hours
+  sampling_interval_minutes: 5
+  meal_time_position: 6  # 6th observation marks meal time
+  baseline_window: 2  # observations before meal for baseline
+  
+  # Gaussian fitting parameters
+  initial_sigma_guess: 20
+  max_delta_minutes: 150
+  max_sigma_minutes: 60
+  min_amplitude: 0
+
+model:
+  # XGBoost parameters (as mentioned in your query)
+  n_estimators: 2000
+  max_depth: 9
+  learning_rate: 0.002
+  subsample: 0.5
+  objective: "reg:squarederror"
+  random_state: 42
+  
+  # Model evaluation
+  test_size: 0.2
+  cv_folds: 5
+
+visualization:
+  figure_size: [10, 6]
+  dpi: 150
+  save_plots: false
+  plot_format: "png"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
