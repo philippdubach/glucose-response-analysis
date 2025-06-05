@@ -204,22 +204,6 @@ class EnhancedFeatureEngineer:
         return df
     
     def create_user_features(self, df: pd.DataFrame, df_hall: pd.DataFrame = None) -> pd.DataFrame:
-        """Create user-specific features (from original implementation)."""
-        df = df.copy()
-        
-        # Add user-level statistics
-        user_stats = df.groupby('userID').agg({
-            'A': ['mean', 'std', 'min', 'max'],
-            'delta': ['mean', 'std', 'min', 'max'],
-            'sigma': ['mean', 'std', 'min', 'max'],
-            'baseline': ['mean', 'std', 'min', 'max']
-        }).round(3)
-        
-        # Flatten column names
-        user_stats.columns = ['_'.join(col).strip() for col in user_stats.columns]
-        user_stats = user_stats.add_prefix('user_')
-        
-        # Merge with main dataframe
-        df = df.merge(user_stats, left_on='userID', right_index=True, how='left')
-        
-        return df
+    """Skip user-specific features to avoid multicollinearity."""
+    logger.info("Skipping user-specific features to avoid target variable leakage")
+    return df
