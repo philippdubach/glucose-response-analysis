@@ -96,7 +96,7 @@ glucose-response-analysis/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/glucose-response-analysis.git
+git clone https://github.com/philippdubach/glucose-response-analysis.git
 cd glucose-response-analysis
 ```
 
