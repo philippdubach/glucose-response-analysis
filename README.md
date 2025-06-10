@@ -292,20 +292,6 @@ The pipeline generates comprehensive visualizations:
 - **Feature Importance**: SHAP values and feature rankings
 - **Bland-Altman Plots**: Agreement analysis and systematic bias detection
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for new functionality
-5. Run tests and ensure they pass
-6. Format code with Black (`black src/ tests/ scripts/`)
-7. Commit changes (`git commit -m 'Add amazing feature'`)
-8. Push to branch (`git push origin feature/amazing-feature`)
-9. Open a Pull Request
-
 ### Development Setup
 
 ```bash
