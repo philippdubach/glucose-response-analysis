@@ -7,7 +7,7 @@
 A machine learning pipeline for analyzing glucose response patterns from continuous glucose monitoring (CGM) data and predicting glycemic response parameters using XGBoost regression models.
 
 ## 📄 Working Paper
-Read the [Working Paper](https://github.com/philippdubach/glucose-response-analysis/blob/1d032b9d7a30df893b4b4e1024b44fdf9451f9d0/Modeling_Postprandial_Glycemic_Response_in_Non_Diabetic_Adults_Using_XGBRegressor.pdf) 
+Read the [Working Paper](https://static.philippdubach.com/pdf/Modeling_Postprandial_Glycemic_Response_in_Non_Diabetic_Adults_Using_XGBRegressor.pdf) 
 
 ## 🎯 Overview
 
